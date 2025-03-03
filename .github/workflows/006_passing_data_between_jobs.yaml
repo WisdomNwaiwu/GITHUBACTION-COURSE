@@ -13,7 +13,7 @@ jobs:
         run: |
           echo "name=Michal"  >> $GITHUB_OUTPUT
     outputs:
-      - name: ${{ steps.data-sender.outputs.name }}
+      name: ${{ steps.data-sender.outputs.name }}
 
   data-reciever:
     runs-on: ubuntu-latest
@@ -21,4 +21,4 @@ jobs:
     steps:
       - name: Recieve data
         run: |
-          echo ${{ needs.data-sender.outputs.name}}
+          echo ${{ needs.data-sender.outputs.name }}
