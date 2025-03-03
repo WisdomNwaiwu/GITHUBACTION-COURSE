@@ -6,10 +6,10 @@ on:
     types:
       -  completed
  
-  jobs:
-    echo-hi-all:
-      runs on: ubuntu-latest
-      steps:
-        - name: Echo "Hi all"
-          run:  |
-            echo "Hi all"
+jobs:
+  echo-hi-all:
+    runs on: ubuntu-latest
+    steps:
+      - name: Echo "Hi all"
+        run:  |
+          echo "Hi all"
