@@ -8,8 +8,8 @@ on:
  
   jobs:
     echo-hi-all:
-      runs on: ubuntu-latest
+      runs-on: ubuntu-latest
       steps:
         - name: Echo "Hi all"
-          run:  |
+          run: |
             echo "Hi all"
