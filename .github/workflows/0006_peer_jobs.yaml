@@ -1,0 +1,16 @@
+name: Peer Jobs
+
+on:
+  workflow_dispatch
+
+jobs:
+  Peer-jobs-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create code
+        id: get-code
+        run: |
+          echo "name=sounds" >> $GITHUB_OUTPUT
+      - name: Recieve code
+        run: |
+          echo ${{ steps.get-code.outputs.name }}
