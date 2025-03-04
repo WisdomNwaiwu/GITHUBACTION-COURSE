@@ -1,0 +1,23 @@
+name: Linking jobs
+
+on:
+  workflow_dispatch
+
+jobs:
+  peer-platform-data:
+    runs-on: ubuntu-latest
+    steps:
+      -  name: create data
+         id: peer-platform-data
+         run: |
+           echo "name=Wisdom" >> $GITHUB_OUTPUT
+    outputs:
+      name: ${{ steps.peer-platform-data.outputs.name }}
+
+  data-reciever:
+    runs-on: ubuntu-latest
+    needs: ["peer-platform-data"]
+    steps:
+      -  name: Recieve data
+         run: |
+           echo ${{ needs.peer-platform-data.outputs.name }}
