@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-20.05, ubuntu-22.05]
+        os: [ubuntu-20.04, ubuntu-22.04]
         python-version: ['3.8', '3.10']
     runs-on: ${{ matrix.os }}
     steps:
